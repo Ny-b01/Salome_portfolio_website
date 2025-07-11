@@ -1,0 +1,521 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* CSS Variables for Color Palette */
+:root {
+    --color-beige: #f5f5dc;
+    --color-dark-green: #2e3b2d;
+    --color-nude: #e3cfc1;
+    --color-nut-brown: #6e4c1e;
+    --color-white: #ffffff;
+    --color-light-beige: #fafaf5;
+    --color-dark-nude: #d4c4b8;
+    --color-text-dark: #2c2c2c;
+    --color-text-light: #666666;
+    --shadow-light: 0 2px 8px rgba(46, 59, 45, 0.1);
+    --shadow-medium: 0 4px 12px rgba(46, 59, 45, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-beige);
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: var(--color-dark-green);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+}
+
+a {
+    color: var(--color-nut-brown);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-dark-green);
+}
+
+/* Header Styles */
+.header {
+    background: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 40px 0 20px 0;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+}
+
+.teacher-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.school-name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: var(--color-nude);
+}
+
+.portfolio-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--color-nude);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Navigation Styles */
+.nav-bar {
+    background: var(--color-nude);
+    padding: 15px 0;
+    border-top: 3px solid var(--color-nut-brown);
+    border-bottom: 3px solid var(--color-nut-brown);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 8px 16px;
+    color: var(--color-dark-green);
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background: transparent;
+}
+
+.nav-link:hover {
+    background: var(--color-nut-brown);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+}
+
+.nav-link:focus {
+    outline: 2px solid var(--color-nut-brown);
+    outline-offset: 2px;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 0;
+    min-height: 60vh;
+    background: var(--color-light-beige);
+}
+
+/* Title Section */
+.title-section {
+    background: linear-gradient(135deg, var(--color-dark-green) 0%, var(--color-nut-brown) 100%);
+    color: var(--color-white);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.title-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.title-content {
+    position: relative;
+    z-index: 1;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--color-nude);
+}
+
+.title-description {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--color-nude);
+    font-style: italic;
+}
+
+/* Table of Contents Section */
+.toc-section {
+    padding: 80px 0;
+    background: var(--color-white);
+}
+
+.toc-section .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: var(--color-nut-brown);
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.toc-card {
+    background: var(--color-light-beige);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    border-left: 5px solid var(--color-nut-brown);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.toc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-left-color: var(--color-dark-green);
+}
+
+.toc-card-title {
+    font-size: 1.4rem;
+    color: var(--color-dark-green);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.toc-card-description {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.toc-card .btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--color-nut-brown);
+    color: var(--color-white);
+    border: none;
+    border-radius: 25px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: var(--shadow-light);
+}
+
+.btn:hover {
+    background: var(--color-dark-green);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn:focus {
+    outline: 2px solid var(--color-nut-brown);
+    outline-offset: 2px;
+}
+
+.btn-secondary {
+    background: var(--color-nude);
+    color: var(--color-dark-green);
+}
+
+.btn-secondary:hover {
+    background: var(--color-dark-nude);
+    color: var(--color-dark-green);
+}
+
+/* Enhanced Footer */
+.footer {
+    background: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 40px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    color: var(--color-nude);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.copyright {
+    color: var(--color-nude);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .teacher-name {
+        font-size: 2.2rem;
+    }
+    
+    .school-name {
+        font-size: 1.2rem;
+    }
+    
+    .portfolio-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .welcome-text {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .welcome-section {
+        padding: 30px 20px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 12px 16px;
+    }
+    
+    /* Title Section Responsive */
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .title-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .title-description {
+        font-size: 1rem;
+    }
+    
+    .title-section {
+        padding: 60px 0;
+    }
+    
+    /* TOC Section Responsive */
+    .toc-section {
+        padding: 60px 0;
+    }
+    
+    .toc-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .toc-card {
+        padding: 25px 20px;
+    }
+    
+    /* Footer Responsive */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .teacher-name {
+        font-size: 1.8rem;
+    }
+    
+    .school-name {
+        font-size: 1rem;
+    }
+    
+    .header {
+        padding: 30px 0 15px 0;
+    }
+    
+    .main-content {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .nav-bar {
+        padding: 10px 0;
+    }
+    
+    .nav-list {
+        padding: 0 10px;
+    }
+    
+    /* Title Section Mobile */
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .title-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .title-description {
+        font-size: 0.9rem;
+    }
+    
+    .title-section {
+        padding: 40px 0;
+    }
+    
+    /* TOC Section Mobile */
+    .toc-section {
+        padding: 40px 0;
+    }
+    
+    .toc-card {
+        padding: 20px 15px;
+    }
+    
+    .toc-card-title {
+        font-size: 1.2rem;
+    }
+    
+    .toc-card-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+*:focus {
+    outline: 2px solid var(--color-nut-brown);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-beige: #ffffff;
+        --color-dark-green: #000000;
+        --color-nude: #cccccc;
+        --color-nut-brown: #333333;
+    }
+} 
